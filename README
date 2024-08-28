@@ -1,0 +1,51 @@
+# GTY Sermon Scraper
+## Giới thiệu
+GTY Sermon Scraper là một công cụ được thiết kế để tải xuống và lưu trữ các bài giảng từ trang web Grace to You (GTY.org). Công cụ này tự động trích xuất nội dung văn bản của các bài giảng và lưu chúng dưới dạng file .txt, được tổ chức theo năm.
+## Tính năng
+- Tải xuống bài giảng từ GTY.org
+- Tổ chức bài giảng theo năm
+- Hỗ trợ tải xuống một URL cụ thể, một năm cụ thể, hoặc một khoảng năm
+- Hiển thị tiến trình tải xuống theo thời gian thực
+- Lưu trữ tiến trình để có thể tiếp tục từ lần chạy trước
+- Ghi log chi tiết về quá trình tải xuống
+## Yêu cầu
+- Python 3.7+
+- Các thư viện Python: requests, beautifulsoup4, tqdm
+## Cài đặt
+1. Clone repository này về máy của bạn:
+git clone https://github.com/your-username/gty-sermon-scraper.git
+cd gty-sermon-scraper
+
+2. Cài đặt các thư viện cần thiết:
+pip install -r requirements.txt
+
+## Sử dụng
+Chạy script với các tùy chọn sau:
+- Tải xuống tất cả bài giảng:
+python main.py
+
+- Tải xuống một URL cụ thể:
+python main.py --url https://www.gty.org/library/sermons-library/1234
+
+- Tải xuống bài giảng của một năm cụ thể:
+python main.py --year 1970
+
+- Tải xuống bài giảng trong một khoảng năm:
+python main.py --start-year 1970 --end-year 1975
+
+## Cấu trúc thư mục
+Sau khi chạy, script sẽ tạo ra cấu trúc thư mục như sau:
+gty_sermons/
+1969/
+1316B.txt
+1316A.txt
+...
+1970/
+1203.txt
+1204.txt
+...
+...
+
+## Ghi chú
+- Script này được thiết kế để chạy với tốc độ chậm (1 yêu cầu/giây) để tránh gây quá tải cho server.
+- Đảm bảo bạn có quyền hợp pháp để tải xuống và sử dụng nội dung từ GTY.org.
