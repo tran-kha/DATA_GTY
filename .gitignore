@@ -1,3 +1,6 @@
-gty_audio_sermons/
+gty_sermons_audio/
+gty_sermons_paired/
+gty_sermons_text/
+
 *.json
 *.log
